@@ -1,6 +1,6 @@
 {
   "name": "bosschat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boss chat is a node module that allows you to interact with OpenAI via the paid or free plan. It includes easy integration into web applications and other programs aswell.",
   "main": "index.js",
   "scripts": {
