@@ -1,0 +1,28 @@
+{
+  "name": "bosschat",
+  "version": "1.0.0",
+  "description": "Boss chat is a node module that allows you to interact with OpenAI via the paid or free plan. It includes easy integration into web applications and other programs aswell.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itz-hyperz/bosschat.git"
+  },
+  "keywords": [
+    "Hyperz",
+    "Boss",
+    "Chat",
+    "OpenAI"
+  ],
+  "author": "Hyperz#0001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/itz-hyperz/bosschat/issues"
+  },
+  "homepage": "https://github.com/itz-hyperz/bosschat#readme",
+  "dependencies": {
+    "chatgpt": "^5.2.2"
+  }
+}
