@@ -1,5 +1,5 @@
 const { ChatGPTUnofficialProxyAPI, ChatGPTAPI } = require('chatgpt');
-var bossHelperInstance = null;
+var BossChatInstance = null;
 var bossStoredConversations = [];
 
 class BossChat {
@@ -13,19 +13,19 @@ class BossChat {
     // Debug function for all error handling
     debug(error) {
         if(!this.debugMode) return;
-        console.log(`[DEBUG MODE] Boss Helper\n`, error);
+        console.log(`[DEBUG MODE] Boss Chat\n`, error);
     };
 
     // Separate initialization protocol to ensure the API can be reconnected
     init() {
         if(this.version === 0) {
-            bossHelperInstance = new ChatGPTUnofficialProxyAPI({ // Free
+            BossChatInstance = new ChatGPTUnofficialProxyAPI({ // Free
                 apiKey: this.apiKey,
                 debug: this.debugMode
             });
             this.debug('FREE OpenAI Instance Selected.');
         } else if(this.version === 1) {
-            bossHelperInstance = new ChatGPTAPI({ // Paid
+            BossChatInstance = new ChatGPTAPI({ // Paid
                 apiKey: this.apiKey,
                 debug: this.debugMode
             });
@@ -34,7 +34,7 @@ class BossChat {
     };
 
     async prompt(value, options) {
-        let response = await bossHelperInstance.sendMessage(value);
+        let response = await BossChatInstance.sendMessage(value);
         if(typeof options == 'undefined') return response;
         if(typeof options.conversationId != 'undefined') {
             bossStoredConversations.push({
