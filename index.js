@@ -2,7 +2,7 @@ const { ChatGPTUnofficialProxyAPI, ChatGPTAPI } = require('chatgpt');
 var bossHelperInstance = null;
 var bossStoredConversations = [];
 
-class BossHelper {
+class BossChat {
     constructor(options) {
         this.apiKey = options.apiKey || 'none', // String, Free/Paid OpenAI API Key
         this.version = options.version || 0, // Integer, 0=Free, 1=Paid
@@ -58,7 +58,7 @@ class BossHelper {
 
 };
 
-module.exports = BossHelper;
+module.exports = BossChat;
 
 // Programmed by Hyperz#0001
 // Programmed by Hyperz#0001
